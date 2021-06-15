@@ -10,6 +10,7 @@ boston = load_boston()
 print(boston.keys())
 regressor = tree.DecisionTreeRegressor(random_state=0)
 # 交叉验证10次训练集测试集的划分效果（R2越接近1越好）
+# 当cv的取值为整数的时候，使用(Stratified)KFold交叉验证方法划分数据集
 score = cross_val_score(regressor, boston.data, boston.target, cv=10
                 # , scoring='neg_mean_squared_error'
                 )
