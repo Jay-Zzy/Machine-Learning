@@ -2,7 +2,7 @@ import sklearn.metrics
 from sklearn.datasets import load_boston
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestRegressor
-
+# 回归森林和分类森林只有criterion参数不同
 boston = load_boston()  # 波士顿数据集target是连续型变量，所以不是分类了
 
 regressor = RandomForestRegressor(n_estimators=100, random_state=0)
